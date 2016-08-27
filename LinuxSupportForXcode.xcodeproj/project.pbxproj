@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C1C68521D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */; };
+		6C1C68541D7131A1004BAA32 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C68531D7131A1004BAA32 /* TestCase.swift */; };
+		6C34A4FE1D7081AB00DDFDAF /* SourceKittenHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C477AED1D70305900D76FCA /* SourceKittenHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C477AAA1D702DF800D76FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C477AA91D702DF800D76FCA /* AppDelegate.swift */; };
+		6C477AAC1D702DF800D76FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C477AAB1D702DF800D76FCA /* Assets.xcassets */; };
+		6C477AAF1D702DF800D76FCA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C477AAD1D702DF800D76FCA /* MainMenu.xib */; };
+		6C477AD91D702E1500D76FCA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C477AD81D702E1500D76FCA /* Cocoa.framework */; };
+		6C477ADE1D702E1500D76FCA /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C477ADD1D702E1500D76FCA /* SourceEditorExtension.swift */; };
+		6C477AE01D702E1500D76FCA /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C477ADF1D702E1500D76FCA /* SourceEditorCommand.swift */; };
+		6C477AE41D702E1500D76FCA /* LinuxSupport.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C477AD61D702E1500D76FCA /* LinuxSupport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C477AF41D70305900D76FCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C477AF31D70305900D76FCA /* main.m */; };
+		6C477B081D7033F400D76FCA /* SourceKittenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C477B071D7033F400D76FCA /* SourceKittenHelper.swift */; };
+		6C7AD94B1D713CCF00A72F3F /* SourceKittenFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */; };
+		6C7AD94C1D713CCF00A72F3F /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD9491D713CBE00A72F3F /* Yaml.framework */; };
+		6C7AD94E1D713CCF00A72F3F /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */; };
+		6C7AD94F1D713CF000A72F3F /* SourceKittenFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C7AD9501D713CF000A72F3F /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C7AD9511D713CF000A72F3F /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7AD9491D713CBE00A72F3F /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C7AD9531D71452900A72F3F /* SourceKittenCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7AD9521D71452900A72F3F /* SourceKittenCommand.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C1C68551D713203004BAA32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C477A9E1D702DF800D76FCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C477AEC1D70305900D76FCA;
+			remoteInfo = SourceKittenHelper;
+		};
+		6C477AE21D702E1500D76FCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C477A9E1D702DF800D76FCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C477AD51D702E1500D76FCA;
+			remoteInfo = LinuxSupport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C34A4FD1D70819B00DDFDAF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				6C34A4FE1D7081AB00DDFDAF /* SourceKittenHelper.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C34A50C1D7085B100DDFDAF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6C7AD94F1D713CF000A72F3F /* SourceKittenFramework.framework in Embed Frameworks */,
+				6C7AD9501D713CF000A72F3F /* SWXMLHash.framework in Embed Frameworks */,
+				6C7AD9511D713CF000A72F3F /* Yaml.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AE81D702E1500D76FCA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C477AE41D702E1500D76FCA /* LinuxSupport.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C19EA011D714F58004673F2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6C19EA021D714F58004673F2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SourceKitRepresentable+LinuxSupport.swift"; sourceTree = "<group>"; };
+		6C1C68531D7131A1004BAA32 /* TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		6C477AA61D702DF800D76FCA /* LinuxSupportForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinuxSupportForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C477AA91D702DF800D76FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C477AAB1D702DF800D76FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C477AAE1D702DF800D76FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6C477AB01D702DF800D76FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C477AD61D702E1500D76FCA /* LinuxSupport.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LinuxSupport.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C477AD81D702E1500D76FCA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6C477ADC1D702E1500D76FCA /* LinuxSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LinuxSupport.entitlements; sourceTree = "<group>"; };
+		6C477ADD1D702E1500D76FCA /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		6C477ADF1D702E1500D76FCA /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		6C477AE11D702E1500D76FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C477AED1D70305900D76FCA /* SourceKittenHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SourceKittenHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C477AEF1D70305900D76FCA /* SourceKittenHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceKittenHelperProtocol.h; sourceTree = "<group>"; };
+		6C477AF31D70305900D76FCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C477AF51D70305900D76FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C477B031D70328400D76FCA /* LinuxSupport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinuxSupport-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C477B061D7033F300D76FCA /* SourceKittenHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SourceKittenHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C477B071D7033F400D76FCA /* SourceKittenHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceKittenHelper.swift; sourceTree = "<group>"; };
+		6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
+		6C7AD9491D713CBE00A72F3F /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/Yaml.framework"; sourceTree = "<group>"; };
+		6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/SWXMLHash.framework"; sourceTree = "<group>"; };
+		6C7AD9521D71452900A72F3F /* SourceKittenCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceKittenCommand.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C477AA31D702DF800D76FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AD31D702E1500D76FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C477AD91D702E1500D76FCA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AEA1D70305900D76FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C7AD94B1D713CCF00A72F3F /* SourceKittenFramework.framework in Frameworks */,
+				6C7AD94E1D713CCF00A72F3F /* SWXMLHash.framework in Frameworks */,
+				6C7AD94C1D713CCF00A72F3F /* Yaml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C477A9D1D702DF800D76FCA = {
+			isa = PBXGroup;
+			children = (
+				6C19EA011D714F58004673F2 /* README.md */,
+				6C19EA021D714F58004673F2 /* LICENSE */,
+				6C477AA81D702DF800D76FCA /* LinuxSupportForXcode */,
+				6C477ADA1D702E1500D76FCA /* LinuxSupport */,
+				6C477AEE1D70305900D76FCA /* SourceKittenHelper */,
+				6C477AD71D702E1500D76FCA /* Frameworks */,
+				6C477AA71D702DF800D76FCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C477AA71D702DF800D76FCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C477AA61D702DF800D76FCA /* LinuxSupportForXcode.app */,
+				6C477AD61D702E1500D76FCA /* LinuxSupport.appex */,
+				6C477AED1D70305900D76FCA /* SourceKittenHelper.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C477AA81D702DF800D76FCA /* LinuxSupportForXcode */ = {
+			isa = PBXGroup;
+			children = (
+				6C477AA91D702DF800D76FCA /* AppDelegate.swift */,
+				6C477AAB1D702DF800D76FCA /* Assets.xcassets */,
+				6C477AB01D702DF800D76FCA /* Info.plist */,
+				6C477AAD1D702DF800D76FCA /* MainMenu.xib */,
+			);
+			path = LinuxSupportForXcode;
+			sourceTree = "<group>";
+		};
+		6C477AD71D702E1500D76FCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C477AD81D702E1500D76FCA /* Cocoa.framework */,
+				6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */,
+				6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */,
+				6C7AD9491D713CBE00A72F3F /* Yaml.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C477ADA1D702E1500D76FCA /* LinuxSupport */ = {
+			isa = PBXGroup;
+			children = (
+				6C477AE11D702E1500D76FCA /* Info.plist */,
+				6C477B031D70328400D76FCA /* LinuxSupport-Bridging-Header.h */,
+				6C477ADF1D702E1500D76FCA /* SourceEditorCommand.swift */,
+				6C477ADD1D702E1500D76FCA /* SourceEditorExtension.swift */,
+				6C7AD9521D71452900A72F3F /* SourceKittenCommand.swift */,
+				6C477ADB1D702E1500D76FCA /* Supporting Files */,
+			);
+			path = LinuxSupport;
+			sourceTree = "<group>";
+		};
+		6C477ADB1D702E1500D76FCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C477ADC1D702E1500D76FCA /* LinuxSupport.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C477AEE1D70305900D76FCA /* SourceKittenHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6C477AF51D70305900D76FCA /* Info.plist */,
+				6C477AF31D70305900D76FCA /* main.m */,
+				6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */,
+				6C477B061D7033F300D76FCA /* SourceKittenHelper-Bridging-Header.h */,
+				6C477B071D7033F400D76FCA /* SourceKittenHelper.swift */,
+				6C477AEF1D70305900D76FCA /* SourceKittenHelperProtocol.h */,
+				6C1C68531D7131A1004BAA32 /* TestCase.swift */,
+			);
+			path = SourceKittenHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C477AA51D702DF800D76FCA /* LinuxSupportForXcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C477AC91D702DF900D76FCA /* Build configuration list for PBXNativeTarget "LinuxSupportForXcode" */;
+			buildPhases = (
+				6C477AA21D702DF800D76FCA /* Sources */,
+				6C477AA31D702DF800D76FCA /* Frameworks */,
+				6C477AA41D702DF800D76FCA /* Resources */,
+				6C477AE81D702E1500D76FCA /* Embed App Extensions */,
+				6C34A50C1D7085B100DDFDAF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C477AE31D702E1500D76FCA /* PBXTargetDependency */,
+			);
+			name = LinuxSupportForXcode;
+			productName = LinuxSupportForXcode;
+			productReference = 6C477AA61D702DF800D76FCA /* LinuxSupportForXcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C477AD51D702E1500D76FCA /* LinuxSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C477AE51D702E1500D76FCA /* Build configuration list for PBXNativeTarget "LinuxSupport" */;
+			buildPhases = (
+				6C477AD21D702E1500D76FCA /* Sources */,
+				6C477AD31D702E1500D76FCA /* Frameworks */,
+				6C477AD41D702E1500D76FCA /* Resources */,
+				6C34A4FD1D70819B00DDFDAF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C1C68561D713203004BAA32 /* PBXTargetDependency */,
+			);
+			name = LinuxSupport;
+			productName = LinuxSupport;
+			productReference = 6C477AD61D702E1500D76FCA /* LinuxSupport.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+		6C477AEC1D70305900D76FCA /* SourceKittenHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C477AF91D70305900D76FCA /* Build configuration list for PBXNativeTarget "SourceKittenHelper" */;
+			buildPhases = (
+				6C477AE91D70305900D76FCA /* Sources */,
+				6C477AEA1D70305900D76FCA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SourceKittenHelper;
+			productName = SourceKittenHelper;
+			productReference = 6C477AED1D70305900D76FCA /* SourceKittenHelper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C477A9E1D702DF800D76FCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Norio Nomura";
+				TargetAttributes = {
+					6C477AA51D702DF800D76FCA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						ProvisioningStyle = Automatic;
+					};
+					6C477AD51D702E1500D76FCA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					6C477AEC1D70305900D76FCA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6C477AA11D702DF800D76FCA /* Build configuration list for PBXProject "LinuxSupportForXcode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C477A9D1D702DF800D76FCA;
+			productRefGroup = 6C477AA71D702DF800D76FCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C477AA51D702DF800D76FCA /* LinuxSupportForXcode */,
+				6C477AD51D702E1500D76FCA /* LinuxSupport */,
+				6C477AEC1D70305900D76FCA /* SourceKittenHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C477AA41D702DF800D76FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C477AAC1D702DF800D76FCA /* Assets.xcassets in Resources */,
+				6C477AAF1D702DF800D76FCA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AD41D702E1500D76FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C477AA21D702DF800D76FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C477AAA1D702DF800D76FCA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AD21D702E1500D76FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C7AD9531D71452900A72F3F /* SourceKittenCommand.swift in Sources */,
+				6C477ADE1D702E1500D76FCA /* SourceEditorExtension.swift in Sources */,
+				6C477AE01D702E1500D76FCA /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C477AE91D70305900D76FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C477B081D7033F400D76FCA /* SourceKittenHelper.swift in Sources */,
+				6C1C68541D7131A1004BAA32 /* TestCase.swift in Sources */,
+				6C1C68521D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift in Sources */,
+				6C477AF41D70305900D76FCA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C1C68561D713203004BAA32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C477AEC1D70305900D76FCA /* SourceKittenHelper */;
+			targetProxy = 6C1C68551D713203004BAA32 /* PBXContainerItemProxy */;
+		};
+		6C477AE31D702E1500D76FCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C477AD51D702E1500D76FCA /* LinuxSupport */;
+			targetProxy = 6C477AE21D702E1500D76FCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C477AAD1D702DF800D76FCA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C477AAE1D702DF800D76FCA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C477AC71D702DF900D76FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		6C477AC81D702DF900D76FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		6C477ACA1D702DF900D76FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LinuxSupportForXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C477ACB1D702DF900D76FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LinuxSupportForXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6C477AE61D702E1500D76FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LinuxSupport/LinuxSupport.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LinuxSupport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode.LinuxSupport";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LinuxSupport/LinuxSupport-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		6C477AE71D702E1500D76FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LinuxSupport/LinuxSupport.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LinuxSupport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode.LinuxSupport";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LinuxSupport/LinuxSupport-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		6C477AFA1D70305900D76FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SourceKittenHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode.SourceKittenHelper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SourceKittenHelper/SourceKittenHelper-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		6C477AFB1D70305900D76FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SourceKittenHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.LinuxSupportForXcode.SourceKittenHelper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SourceKittenHelper/SourceKittenHelper-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C477AA11D702DF800D76FCA /* Build configuration list for PBXProject "LinuxSupportForXcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C477AC71D702DF900D76FCA /* Debug */,
+				6C477AC81D702DF900D76FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C477AC91D702DF900D76FCA /* Build configuration list for PBXNativeTarget "LinuxSupportForXcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C477ACA1D702DF900D76FCA /* Debug */,
+				6C477ACB1D702DF900D76FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C477AE51D702E1500D76FCA /* Build configuration list for PBXNativeTarget "LinuxSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C477AE61D702E1500D76FCA /* Debug */,
+				6C477AE71D702E1500D76FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C477AF91D70305900D76FCA /* Build configuration list for PBXNativeTarget "SourceKittenHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C477AFA1D70305900D76FCA /* Debug */,
+				6C477AFB1D70305900D76FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C477A9E1D702DF800D76FCA /* Project object */;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>LinuxSupport.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>LinuxSupportForXcode.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SourceKittenHelper.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6C477AA51D702DF800D76FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C477AB41D702DF900D76FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C477ABF1D702DF900D76FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C477AD51D702E1500D76FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C477AEC1D70305900D76FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
