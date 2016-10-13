@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C01639A1DAF242E00F6815A /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0163991DAF242E00F6815A /* Enum.swift */; };
 		6C1C68521D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */; };
 		6C1C68541D7131A1004BAA32 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C68531D7131A1004BAA32 /* TestCase.swift */; };
 		6C34A4FE1D7081AB00DDFDAF /* SourceKittenHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C477AED1D70305900D76FCA /* SourceKittenHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -83,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C0163991DAF242E00F6815A /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		6C19EA011D714F58004673F2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C19EA021D714F58004673F2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SourceKitRepresentable+LinuxSupport.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				6C477AF51D70305900D76FCA /* Info.plist */,
 				6C477AF31D70305900D76FCA /* main.m */,
+				6C0163991DAF242E00F6815A /* Enum.swift */,
 				6C1C68511D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift */,
 				6C477B061D7033F300D76FCA /* SourceKittenHelper-Bridging-Header.h */,
 				6C477B071D7033F400D76FCA /* SourceKittenHelper.swift */,
@@ -372,6 +375,7 @@
 				6C477B081D7033F400D76FCA /* SourceKittenHelper.swift in Sources */,
 				6C1C68541D7131A1004BAA32 /* TestCase.swift in Sources */,
 				6C1C68521D71312A004BAA32 /* SourceKitRepresentable+LinuxSupport.swift in Sources */,
+				6C01639A1DAF242E00F6815A /* Enum.swift in Sources */,
 				6C477AF41D70305900D76FCA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

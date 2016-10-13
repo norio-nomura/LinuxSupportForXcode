@@ -4,6 +4,7 @@
 LinuxSupport for Xcode is an Xcode Extension.
 
 ## Functions
+- Generate available for enumcases that changed to uppercase/lowercase
 - Generate allTests for subclasses of `XCTestCase`
 
 ## Requirements

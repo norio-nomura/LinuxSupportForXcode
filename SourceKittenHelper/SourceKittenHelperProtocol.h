@@ -34,4 +34,7 @@ typedef void (^SourceKittenHelperResultHandler)(NSInteger status, NSString * _No
 - (void)allTestsExtensionsFor:(NSString * _Nonnull)contents
                         reply:(SourceKittenHelperResultHandler _Nonnull)reply;
 
+- (void)enumAvailabeExtensionsFor:(NSString * _Nonnull)contents
+                        reply:(SourceKittenHelperResultHandler _Nonnull)reply;
+
 @end

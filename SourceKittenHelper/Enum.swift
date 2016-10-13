@@ -1,8 +1,8 @@
 //
-//  SourceEditorCommand.swift
-//  LinuxSupport
+//  Enum.swift
+//  SourceKittenHelper
 //
-//  Created by Norio Nomura on 8/26/16.
+//  Created by Norio Nomura on 10/13/16.
 //
 //  Copyright (c) 2016 Norio Nomura
 //
@@ -26,35 +26,34 @@
 //
 
 import Foundation
-import XcodeKit
 
-let targetContentUTIs = ["public.swift-source"]
-
-protocol InvocationHandler {
-    /// Returns true if invocation handled.
-    /// - throws:
-    func handle(invocation: XCSourceEditorCommandInvocation) throws -> Bool
+struct Enum {
+    var name: String
+    var cases: [String]
 }
 
-class SourceEditorCommand: NSObject, XCSourceEditorCommand {
-    let invocationHandlers = [SourceKittenCommand()]
-    
-    func performCommandWithInvocation(invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void) {
-        var error: NSError? = nil
-        defer { completionHandler(error) }
-        if !targetContentUTIs.contains(invocation.buffer.contentUTI) { return }
-
-        do {
-            for handler in invocationHandlers where try handler.handle(invocation) { return }
-            throw Error.unknownCommandIdentifier
-        } catch let anError {
-            error = anError as NSError
-            return
-        }
+extension Enum: CustomStringConvertible {
+    var description: String {
+        return [
+            "extension \(name) {",
+            cases.map {
+                "\t@available(*, unavailable, renamed: \"\($0)\")\n" +
+                "\tpublic static var \($0.caseChanged): \(name) { fatalError() }"
+                }.joinWithSeparator("\n\n"),
+            "}"
+            ].joinWithSeparator("\n")
     }
+}
 
-    private enum Error: ErrorType {
-        case error(String)
-        case unknownCommandIdentifier
+extension String {
+    var caseChanged: String {
+        guard let first = unicodeScalars.first else { return self }
+        if NSCharacterSet.uppercaseLetterCharacterSet().longCharacterIsMember(first.value) {
+            return String(first).localizedLowercaseString + String(unicodeScalars.dropFirst())
+        } else if NSCharacterSet.lowercaseLetterCharacterSet().longCharacterIsMember(first.value) {
+            return String(first).localizedUppercaseString + String(unicodeScalars.dropFirst())
+        } else {
+            return self
+        }
     }
 }

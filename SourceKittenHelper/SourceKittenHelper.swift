@@ -59,5 +59,34 @@ import SourceKittenFramework
             reply(0, extensions)
         }
     }
+
+    @objc func enumAvailabeExtensionsFor(contents: String, reply: SourceKittenHelperResultHandler) {
+        let file = File(contents: contents)
+        let structure = Structure(file: file)
+        guard let substructure = structure.dictionary.substructure else {
+            return reply(-1, "failed to analyze")
+        }
+
+        let enums = substructure
+            .filter { $0.isEnum }
+            .flatMap { anEnum -> Enum? in
+                let cases = anEnum.enumcases
+                    .flatMap { $0.enumelements }
+                    .flatMap { $0.name }
+                if !cases.isEmpty, let name = anEnum.name {
+                    return Enum(name: name, cases: cases)
+                } else {
+                    return nil
+                }
+        }
+        if enums.isEmpty {
+            reply(-1, "no enums")
+        } else {
+            let extensions = enums.map {
+                $0.description
+                }.joinWithSeparator("\n\n")
+            reply(0, extensions)
+        }
+    }
 }
 

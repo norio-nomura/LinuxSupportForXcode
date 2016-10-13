@@ -30,8 +30,20 @@ extension SourceKitRepresentable {
         return kind == SwiftDeclarationKind.Class.rawValue
     }
 
+    var isEnum: Bool {
+        return kind == SwiftDeclarationKind.Enum.rawValue
+    }
+
     var isInstanceMethod: Bool {
         return kind == SwiftDeclarationKind.FunctionMethodInstance.rawValue
+    }
+
+    var isEnumcase: Bool {
+        return kind == SwiftDeclarationKind.Enumcase.rawValue
+    }
+
+    var isEnumelement: Bool {
+        return kind == SwiftDeclarationKind.Enumelement.rawValue
     }
 
     // name
@@ -75,5 +87,13 @@ extension SourceKitRepresentable {
 
     var instanceMethods: [SourceKitRepresentable] {
         return substructure?.filter({ $0.isInstanceMethod }) ?? []
+    }
+
+    var enumcases: [SourceKitRepresentable] {
+        return substructure?.filter({ $0.isEnumcase }) ?? []
+    }
+
+    var enumelements: [SourceKitRepresentable] {
+        return substructure?.filter({ $0.isEnumelement }) ?? []
     }
 }
