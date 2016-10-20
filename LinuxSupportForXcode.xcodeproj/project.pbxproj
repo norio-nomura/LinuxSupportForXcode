@@ -107,9 +107,9 @@
 		6C477B031D70328400D76FCA /* LinuxSupport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinuxSupport-Bridging-Header.h"; sourceTree = "<group>"; };
 		6C477B061D7033F300D76FCA /* SourceKittenHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SourceKittenHelper-Bridging-Header.h"; sourceTree = "<group>"; };
 		6C477B071D7033F400D76FCA /* SourceKittenHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceKittenHelper.swift; sourceTree = "<group>"; };
-		6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SourceKittenFramework.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/SourceKittenFramework.framework"; sourceTree = "<group>"; };
-		6C7AD9491D713CBE00A72F3F /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/Yaml.framework"; sourceTree = "<group>"; };
-		6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = "../../Library/Developer/Xcode/DerivedData/LinuxSupportForXcode-duhrhsysrwammpemqyqnffnzmcyx/Build/Products/Debug/SWXMLHash.framework"; sourceTree = "<group>"; };
+		6C7AD9471D713C7900A72F3F /* SourceKittenFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SourceKittenFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7AD9491D713CBE00A72F3F /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Yaml.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7AD94D1D713CCF00A72F3F /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7AD9521D71452900A72F3F /* SourceKittenCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceKittenCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
