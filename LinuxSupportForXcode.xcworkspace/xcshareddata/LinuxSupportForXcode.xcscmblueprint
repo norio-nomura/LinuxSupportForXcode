@@ -1,10 +1,12 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4E5605035AB2EC8B15EC69C5C1B2722D69E3FBF2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "E111B14063EC98ABE518A93E1C4498F4167C2DEE" : 9223372036854775807,
     "EB2210CFD48672E403BED699D5D7F01B844069CF" : 9223372036854775807,
+    "4E5605035AB2EC8B15EC69C5C1B2722D69E3FBF2" : 9223372036854775807,
     "FD7DA18210A2C280E9107E37D7344F243FEE5F75" : 9223372036854775807,
     "E084C86B03F81D63323C9E7510697EA528A758C7" : 9223372036854775807
   },
@@ -12,6 +14,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "E111B14063EC98ABE518A93E1C4498F4167C2DEE" : "LinuxSupportForXcode\/Carthage\/Checkouts\/YamlSwift\/",
     "EB2210CFD48672E403BED699D5D7F01B844069CF" : "LinuxSupportForXcode\/Carthage\/Checkouts\/SWXMLHash\/",
+    "4E5605035AB2EC8B15EC69C5C1B2722D69E3FBF2" : "LinuxSupportForXcode\/",
     "FD7DA18210A2C280E9107E37D7344F243FEE5F75" : "LinuxSupportForXcode\/Carthage\/Checkouts\/SourceKitten\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7" : "LinuxSupportForXcode\/Carthage\/Checkouts\/SourceKitten\/Carthage\/Checkouts\/xcconfigs\/"
   },
@@ -19,6 +22,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LinuxSupportForXcode.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:norio-nomura\/LinuxSupportForXcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4E5605035AB2EC8B15EC69C5C1B2722D69E3FBF2"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
