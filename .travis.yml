@@ -1,0 +1,4 @@
+language: generic
+os: osx
+osx_image: xcode8
+script: xcodebuild -workspace LinuxSupportForXcode.xcworkspace -scheme LinuxSupportForXcode install DSTROOT=~ CODE_SIGN_IDENTITY=""
