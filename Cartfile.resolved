@@ -1,3 +1,3 @@
-github "drmohundro/SWXMLHash" "17aa670cafdd4b9affe5238589525f3535981617"
-github "behrang/YamlSwift" "eecbc9108c297f3faf946504b648b0a7368b0f4d"
-github "jpsim/SourceKitten" "e972087a8c6b3b709facc4663ec5bbec132502bd"
+github "drmohundro/SWXMLHash" "4.2.3"
+github "jpsim/SourceKitten" "2cfe9cb1989991734ea863d80662c326ccf9157b"
+github "jpsim/Yams" "0.3.7"
