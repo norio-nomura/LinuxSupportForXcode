@@ -39,19 +39,19 @@ extension Enum: CustomStringConvertible {
             cases.map {
                 "\t@available(*, unavailable, renamed: \"\($0)\")\n" +
                 "\tpublic static var \($0.caseChanged): \(name) { fatalError() }"
-                }.joinWithSeparator("\n\n"),
+                }.joined(separator: "\n\n"),
             "}"
-            ].joinWithSeparator("\n")
+            ].joined(separator: "\n")
     }
 }
 
 extension String {
     var caseChanged: String {
         guard let first = unicodeScalars.first else { return self }
-        if NSCharacterSet.uppercaseLetterCharacterSet().longCharacterIsMember(first.value) {
-            return String(first).localizedLowercaseString + String(unicodeScalars.dropFirst())
-        } else if NSCharacterSet.lowercaseLetterCharacterSet().longCharacterIsMember(first.value) {
-            return String(first).localizedUppercaseString + String(unicodeScalars.dropFirst())
+        if CharacterSet.uppercaseLetters.contains(first) {
+            return String(first).localizedLowercase + String(unicodeScalars.dropFirst())
+        } else if CharacterSet.lowercaseLetters.contains(first) {
+            return String(first).localizedUppercase + String(unicodeScalars.dropFirst())
         } else {
             return self
         }

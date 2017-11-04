@@ -11,6 +11,6 @@
       location = "group:Carthage/Checkouts/SWXMLHash/SWXMLHash.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/YamlSwift/Yaml.xcodeproj">
+      location = "group:Carthage/Checkouts/Yams/Yams.xcodeproj">
    </FileRef>
 </Workspace>

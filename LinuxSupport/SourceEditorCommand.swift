@@ -38,14 +38,14 @@ protocol InvocationHandler {
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     let invocationHandlers = [SourceKittenCommand()]
-    
-    func performCommandWithInvocation(invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void) {
+
+    public func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void) {
         var error: NSError? = nil
         defer { completionHandler(error) }
         if !targetContentUTIs.contains(invocation.buffer.contentUTI) { return }
 
         do {
-            for handler in invocationHandlers where try handler.handle(invocation) { return }
+            for handler in invocationHandlers where try handler.handle(invocation: invocation) { return }
             throw Error.unknownCommandIdentifier
         } catch let anError {
             error = anError as NSError
@@ -53,7 +53,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         }
     }
 
-    private enum Error: ErrorType {
+    private enum Error: Swift.Error {
         case error(String)
         case unknownCommandIdentifier
     }

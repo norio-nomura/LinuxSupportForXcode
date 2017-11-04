@@ -29,7 +29,7 @@ import Foundation
 import SourceKittenFramework
 
 @objc class SourceKittenHelper: NSObject, SourceKittenHelperProtocol {
-    @objc func allTestsExtensionsFor(contents: String, reply: SourceKittenHelperResultHandler) {
+    @objc func allTestsExtensions(for contents: String, reply: @escaping SourceKittenHelperResultHandler) {
         let file = File(contents: contents)
         let structure = Structure(file: file)
         guard let substructure = structure.dictionary.substructure else {
@@ -43,7 +43,7 @@ import SourceKittenFramework
                     .filter { $0.isTestable }
                     .flatMap { $0.name }
                     .filter { $0.hasPrefix("test") && $0.hasSuffix("()") }
-                    .map { $0.substringToIndex($0.endIndex.advancedBy(-2)) }
+                    .map { String($0.dropLast(2)) }
                 if !methods.isEmpty, let name = xctest.name {
                     return TestCase(name: name, tests: methods)
                 } else {
@@ -55,12 +55,12 @@ import SourceKittenFramework
         } else {
             let extensions = testCases.map {
                 $0.description
-            }.joinWithSeparator("\n\n")
+            }.joined(separator: "\n\n")
             reply(0, extensions)
         }
     }
 
-    @objc func enumAvailabeExtensionsFor(contents: String, reply: SourceKittenHelperResultHandler) {
+    @objc func enumAvailabeExtensions(for contents: String, reply: @escaping  SourceKittenHelperResultHandler) {
         let file = File(contents: contents)
         let structure = Structure(file: file)
         guard let substructure = structure.dictionary.substructure else {
@@ -84,9 +84,8 @@ import SourceKittenFramework
         } else {
             let extensions = enums.map {
                 $0.description
-                }.joinWithSeparator("\n\n")
+                }.joined(separator: "\n\n")
             reply(0, extensions)
         }
     }
 }
-

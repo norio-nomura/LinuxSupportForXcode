@@ -23,32 +23,32 @@ extension SourceKitRepresentable {
 
     // kind
     var kind: String? {
-        return self[.Kind] as? String
+        return self[.kind] as? String
     }
 
     var isClass: Bool {
-        return kind == SwiftDeclarationKind.Class.rawValue
+        return kind == SwiftDeclarationKind.class.rawValue
     }
 
     var isEnum: Bool {
-        return kind == SwiftDeclarationKind.Enum.rawValue
+        return kind == SwiftDeclarationKind.enum.rawValue
     }
 
     var isInstanceMethod: Bool {
-        return kind == SwiftDeclarationKind.FunctionMethodInstance.rawValue
+        return kind == SwiftDeclarationKind.functionMethodInstance.rawValue
     }
 
     var isEnumcase: Bool {
-        return kind == SwiftDeclarationKind.Enumcase.rawValue
+        return kind == SwiftDeclarationKind.enumcase.rawValue
     }
 
     var isEnumelement: Bool {
-        return kind == SwiftDeclarationKind.Enumelement.rawValue
+        return kind == SwiftDeclarationKind.enumelement.rawValue
     }
 
     // name
     var name: String? {
-        return self[.Name] as? String
+        return self[.name] as? String
     }
 
     // accessibility
@@ -62,14 +62,14 @@ extension SourceKitRepresentable {
 
     // inheritedTypes
     var inheritedTypes: AnySequence<String> {
-        if let array = self[.Inheritedtypes] as? [SourceKitRepresentable] {
-            var generator = array.generate()
-            let nameGenerator = AnyGenerator() { () -> String? in
+        if let array = self[.inheritedtypes] as? [SourceKitRepresentable] {
+            var generator = array.makeIterator()
+            let nameGenerator = AnyIterator { () -> String? in
                 return generator.next()?.name
             }
             return AnySequence(nameGenerator)
         } else {
-            return AnySequence(AnyGenerator(body: {nil}))
+            return AnySequence(AnyIterator({nil}))
         }
     }
 
@@ -82,7 +82,7 @@ extension SourceKitRepresentable {
 
     // substructure
     var substructure: [SourceKitRepresentable]? {
-        return self[.Substructure] as? [SourceKitRepresentable]
+        return self[.substructure] as? [SourceKitRepresentable]
     }
 
     var instanceMethods: [SourceKitRepresentable] {

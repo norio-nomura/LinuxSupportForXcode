@@ -38,10 +38,10 @@ extension TestCase: CustomStringConvertible {
             "\t\treturn [",
             tests.map {
                 "\t\t\t(\"\($0)\", \($0)),"
-                }.joinWithSeparator("\n"),
+                }.joined(separator: "\n"),
             "\t\t]",
             "\t}",
             "}"
-            ].joinWithSeparator("\n")
+            ].joined(separator: "\n")
     }
 }

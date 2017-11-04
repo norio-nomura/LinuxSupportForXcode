@@ -45,7 +45,7 @@ extension SourceKittenCommand: InvocationHandler {
 }
 
 class SourceKittenCommand {
-    enum Error: ErrorType {
+    enum Error: Swift.Error {
         case error(String)
         case helperConnectionError
     }
@@ -54,38 +54,36 @@ class SourceKittenCommand {
         connection.invalidate()
     }
 
-    private let connection = { () -> NSXPCConnection in
+    fileprivate let connection = { () -> NSXPCConnection in
         let connection = NSXPCConnection(serviceName: ServiceName)
-        connection.remoteObjectInterface = NSXPCInterface(withProtocol: SourceKittenHelperProtocol.self)
+        connection.remoteObjectInterface = NSXPCInterface(with: SourceKittenHelperProtocol.self)
         return connection
     }()
 }
 
 // MARK: - generateAllTests
 extension SourceKittenCommand {
-    private func generateAllTests(for buffer: XCSourceTextBuffer) throws {
-        let extensions = try allTestsExtensions(for: buffer.completeBuffer) as NSString
+    fileprivate func generateAllTests(for buffer: XCSourceTextBuffer) throws {
+        let extensions = try allTestsExtensions(for: buffer.completeBuffer)
 
         // adjust tabs to buffer configurations
-        let formatted: NSString
+        let formatted: String
         if buffer.usesTabsForIndentation {
             formatted = extensions
         } else {
-            let spaces = String(count: buffer.tabWidth, repeatedValue: Character(" "))
-            formatted = extensions.stringByReplacingOccurrencesOfString("\t", withString: spaces)
+            let spaces = String(repeating: Character(" "), count: buffer.tabWidth)
+            formatted = extensions.replacingOccurrences(of: "\t", with: spaces)
         }
 
         // add blank line before extensions
-        buffer.lines.addObject("\n")
+        buffer.lines.add("\n")
 
         // add extensions
-        var start = 0, end = 0
-        while start < formatted.length {
-            let range = NSRange(location: start, length: 0)
-            formatted.getLineStart(&start, end: &end, contentsEnd: nil, forRange: range)
-            let lineRange = NSRange(location: start, length: end - start)
-            let newLine = formatted.substringWithRange(lineRange)
-            buffer.lines.addObject(newLine)
+        var start = formatted.startIndex, end = formatted.startIndex, contentsEnd = formatted.startIndex
+        while start < formatted.endIndex {
+            formatted.getLineStart(&start, end: &end, contentsEnd: &contentsEnd, for: start..<start)
+            let newLine = formatted[start..<end]
+            buffer.lines.add(newLine)
             start = end
         }
     }
@@ -98,14 +96,14 @@ extension SourceKittenCommand {
             throw Error.helperConnectionError
         }
 
-        let semaphore = dispatch_semaphore_create(0)
+        let semaphore = DispatchSemaphore(value: 0)
         var (status, output) = (-1, "")
-        helper.allTestsExtensionsFor(contents) {
-            (status, output) = ($0,$1)
-            dispatch_semaphore_signal(semaphore)
+        helper.allTestsExtensions(for: contents) {
+            (status, output) = ($0, $1)
+            semaphore.signal()
         }
 
-        dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC) * 10))
+        _ = semaphore.wait(timeout: .now() + .seconds(10))
 
         if status != 0 {
             throw Error.error(output)
@@ -117,29 +115,27 @@ extension SourceKittenCommand {
 
 // MARK: - generateEnumAvailabe
 extension SourceKittenCommand {
-    private func generateEnumAvailabeFor(for buffer: XCSourceTextBuffer) throws {
-        let extensions = try enumAvailabeExtensions(for: buffer.completeBuffer) as NSString
+    fileprivate func generateEnumAvailabeFor(for buffer: XCSourceTextBuffer) throws {
+        let extensions = try enumAvailabeExtensions(for: buffer.completeBuffer)
 
         // adjust tabs to buffer configurations
-        let formatted: NSString
+        let formatted: String
         if buffer.usesTabsForIndentation {
             formatted = extensions
         } else {
-            let spaces = String(count: buffer.tabWidth, repeatedValue: Character(" "))
-            formatted = extensions.stringByReplacingOccurrencesOfString("\t", withString: spaces)
+            let spaces = String(repeating: Character(" "), count: buffer.tabWidth)
+            formatted = extensions.replacingOccurrences(of: "\t", with: spaces)
         }
 
         // add blank line before extensions
-        buffer.lines.addObject("\n")
+        buffer.lines.add("\n")
 
         // add extensions
-        var start = 0, end = 0
-        while start < formatted.length {
-            let range = NSRange(location: start, length: 0)
-            formatted.getLineStart(&start, end: &end, contentsEnd: nil, forRange: range)
-            let lineRange = NSRange(location: start, length: end - start)
-            let newLine = formatted.substringWithRange(lineRange)
-            buffer.lines.addObject(newLine)
+        var start = formatted.startIndex, end = formatted.startIndex, contentsEnd = formatted.startIndex
+        while start < formatted.endIndex {
+            formatted.getLineStart(&start, end: &end, contentsEnd: &contentsEnd, for: start..<start)
+            let newLine = formatted[start..<end]
+            buffer.lines.add(newLine)
             start = end
         }
     }
@@ -152,19 +148,19 @@ extension SourceKittenCommand {
             throw Error.helperConnectionError
         }
 
-        let semaphore = dispatch_semaphore_create(0)
+        let semaphore = DispatchSemaphore(value: 0)
         var (status, output) = (-1, "")
-        helper.enumAvailabeExtensionsFor(contents) {
-            (status, output) = ($0,$1)
-            dispatch_semaphore_signal(semaphore)
+        helper.enumAvailabeExtensions(for: contents) {
+            (status, output) = ($0, $1)
+            semaphore.signal()
         }
 
-        dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC) * 10))
+        _ = semaphore.wait(timeout: .now() + .seconds(10))
 
         if status != 0 {
             throw Error.error(output)
         }
-        
+
         return output
     }
 }
